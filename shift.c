@@ -26,8 +26,9 @@ int main(void)
 {
 	const char *s = "ABCDEFGHIJK";
 	size_t n = strlen(s);
-	char a[n];
+	char a[n + 1];
 
+	memset(a, '\0', sizeof a);
 	strncpy(a, s, n);
 	printf("%s\n", shift(a, 0));
 	strncpy(a, s, n);
