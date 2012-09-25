@@ -28,20 +28,20 @@ int main(void)
 	size_t n = strlen(s);
 	char a[n];
 
-	strncpy(a, "ABCDEFGHIJK", n);
+	strncpy(a, s, n);
 	printf("%s\n", shift(a, 0));
-	strncpy(a, "ABCDEFGHIJK", n);
+	strncpy(a, s, n);
 	printf("%s\n", shift(a, 1));
-	strncpy(a, "ABCDEFGHIJK", n);
+	strncpy(a, s, n);
 	printf("%s\n", shift(a, 3));
-	strncpy(a, "ABCDEFGHIJK", n);
+	strncpy(a, s, n);
 	printf("%s\n", shift(a, 5));
-	strncpy(a, "ABCDEFGHIJK", n);
+	strncpy(a, s, n);
 	printf("%s\n", shift(a, 7));
-	strncpy(a, "ABCDEFGHIJK", n);
+	strncpy(a, s, n);
 	printf("%s\n", shift(a, 9));
-	strncpy(a, "ABCDEFGHIJK", n);
+	strncpy(a, s, n);
 	printf("%s\n", shift(a, 10));
-	strncpy(a, "ABCDEFGHIJK", n);
+	strncpy(a, s, n);
 	printf("%s\n", shift(a, 11));
 }
