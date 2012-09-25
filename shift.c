@@ -43,5 +43,5 @@ int main(void)
 	strncpy(a, s, n);
 	printf("%s\n", shift(a, 10));
 	strncpy(a, s, n);
-	printf("%s\n", shift(a, 11));
+	printf("%s\n", shift(a, n));
 }
