@@ -1,0 +1,13 @@
+$ make && ./main.out
+gcc -std=c99 -Wall -W -Wconversion -g -I ../include  -c -o shift.o shift.c
+gcc  array.o shift.o -o main.out
+ABCDEFGHIJK
+BCDEFGHIJKA
+DEFGHIJKABC
+FGHIJKABCDE
+HIJKABCDEFG
+JKABCDEFGHI
+KABCDEFGHIJ
+ABCDEFGHIJK
+$
+
