@@ -1,15 +1,14 @@
-Useful Unix commands tips
+Linux commands
  
 
-o Find
-
+o Find files
 
 $ find /home/jhl -name "a.c"
 $ find /home/jhl -name "a.c" -exec grep -l "main" {} \;
+$ find /home/jhl -name "a.c" -print0 | xargs -0 grep -l "main"
 
 
-o Find files in current directory excluding sub-directories
-
+o Find and count files in current directory (excluding sub-directories)
 
 $ find /home/jhl -name "*.txt" -maxdepth 1
 $ p='/home/jhl'; d='/*'; \
@@ -20,15 +19,17 @@ $ p='/home/jhl'; d='/*/*'; \
   find "$p" -name "*.h" -type f ! -path "$p$d"
  
 
-o Find and replace
-
+o Find files and replace content
 
 $ find . -type f -exec sed -i 's/catch/repl/g' {} \;
+
+
+o Find and delete files
+
 $ find . -name "*.c" -exec grep -l hello {} \; -exec rm {} \;
  
  
-o Find ane rename
-
+o Find and rename files
 
 o.o In -exec option, {} matches the file names found 
 
