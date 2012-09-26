@@ -32,5 +32,4 @@ set nows
 
 4. ~/.hushlogin
 
-$ echo ~/.hushlogin
-
+$ echo > ~/.hushlogin
