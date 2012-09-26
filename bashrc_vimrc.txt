@@ -1,0 +1,36 @@
+1. ~/.bashrc:
+
+PS1='\$ '
+set -o vi
+alias ls=ls --color=never
+ulimit -c unlimited
+
+# If this is an xterm set the title to user@host:dir
+case "$TERM" in
+xterm*|rxvt*)
+    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+    ;;
+*)
+    ;;
+esac
+
+
+2. ~/.profile
+
+if [ -f "$HOME/.bashrc" ]; then
+    . "$HOME/.bashrc"
+fi
+
+
+3. ~/.vimrc:
+
+set ai
+set hls
+set nows
+:syntax off
+
+
+4. ~/.hushlogin
+
+$ echo ~/.hushlogin
+

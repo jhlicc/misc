@@ -1,0 +1,41 @@
+Useful Unix commands tips
+ 
+
+o Find
+
+
+$ find /home/jhl -name "a.c"
+$ find /home/jhl -name "a.c" -exec grep -l "main" {} \;
+
+
+o Find files in current directory excluding sub-directories
+
+
+$ find /home/jhl -name "*.txt" -maxdepth 1
+$ p='/home/jhl'; d='/*'; \
+  find "$p" -path "$p$d" -prune -name "*" -type f
+$ p='/home/jhl'; d='/*/*'; \
+   find "$p" -name "*.c" -type f \( -path "$p$d" -prune -o -print \)
+$ p='/home/jhl'; d='/*/*'; \
+  find "$p" -name "*.h" -type f ! -path "$p$d"
+ 
+
+o Find and replace
+
+
+$ find . -type f -exec sed -i 's/catch/repl/g' {} \;
+$ find . -name "*.c" -exec grep -l hello {} \; -exec rm {} \;
+ 
+ 
+o Find ane rename
+
+
+o.o In -exec option, {} matches the file names found 
+
+$ find . -name "*.txt" -exec mv {} {}.txt \;
+ 
+o.o Using perl rename
+
+$ find . -name "*.txt" -print0 | xargs -0 rename 's/\.txt$//' "*.txt"
+$ find . -name "*.txt" -print0 | xargs -0 rename -n 's/\.txt$//' "*.txt"
+
