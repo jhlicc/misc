@@ -1,4 +1,4 @@
-1. ~/.bashrc:
+1. ~/.bashrc
 
 PS1='\$ '
 set -o vi
@@ -22,7 +22,7 @@ if [ -f "$HOME/.bashrc" ]; then
 fi
 
 
-3. ~/.vimrc:
+3. ~/.vimrc
 
 set ai
 set hls

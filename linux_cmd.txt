@@ -31,7 +31,7 @@ $ find . -name "*.c" -exec grep -l hello {} \; -exec rm {} \;
  
 o Find and rename files
 
-o.o In -exec option, {} matches the file names found 
+o.o In -exec option, the {} matches the file names found 
 
 $ find . -name "*.txt" -exec mv {} {}.txt \;
  
