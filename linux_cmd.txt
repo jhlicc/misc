@@ -37,5 +37,5 @@ $ find . -name "*.txt" -exec mv {} {}.txt \;
 o.o Using perl rename
 
 $ find . -name "*.txt" -print0 | xargs -0 rename 's/\.txt$//' "*.txt"
+$ find . -name "*.txt" -print0 | xargs -0 rename 's/\.txt$/\.doc/' "*.txt"
 $ find . -name "*.txt" -print0 | xargs -0 rename -n 's/\.txt$//' "*.txt"
-
