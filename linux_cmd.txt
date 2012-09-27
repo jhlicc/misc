@@ -8,7 +8,7 @@ $ find /home/jhl -name "a.c" -exec grep -l "main" {} \;
 $ find /home/jhl -name "a.c" -print0 | xargs -0 grep -l "main"
 
 
-o Find and count files in current directory (excluding sub-directories)
+o Find files in current directory (excluding sub-directories)
 
 $ find /home/jhl -name "*.txt" -maxdepth 1
 $ p='/home/jhl'; d='/*'; \
