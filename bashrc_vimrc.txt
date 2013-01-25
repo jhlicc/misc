@@ -24,10 +24,13 @@ fi
 
 3. ~/.vimrc
 
+:set expandtab
+:syntax off
 set ai
 set hls
 set nows
-:syntax off
+set sw=2
+set ts=2
 
 
 4. ~/.hushlogin
